@@ -1,24 +1,2 @@
-function doPost(e) {
-
-  const sheet = SpreadsheetApp
-    .getActiveSpreadsheet()
-    .getSheetByName("Apostas");
-
-  const dados = JSON.parse(e.postData.contents);
-
-  sheet.appendRow([
-    new Date(),
-    dados.apostador,
-    ...dados.palpites
-  ]);
-
-  return ContentService
-    .createTextOutput(
-      JSON.stringify({
-        sucesso:true
-      })
-    )
-    .setMimeType(
-      ContentService.MimeType.JSON
-    );
-}
+Bolão Futebol
+Site funcionando com sucesso!
