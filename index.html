@@ -2,7 +2,7 @@ function doPost(e) {
 
   const sheet = SpreadsheetApp
     .getActiveSpreadsheet()
-    .getSheetByName("Página1");
+    .getSheetByName("Apostas");
 
   const dados = JSON.parse(e.postData.contents);
 
@@ -15,7 +15,7 @@ function doPost(e) {
   return ContentService
     .createTextOutput(
       JSON.stringify({
-        sucesso: true
+        sucesso:true
       })
     )
     .setMimeType(
